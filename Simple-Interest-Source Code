@@ -1,0 +1,21 @@
+import java.lang.Math;
+
+/* This program will take the variables of
+   simple interest and calculate the amount
+   that you will have later. */
+
+public class simpleInterest {               // create the class
+    public static void main(String args[]) {
+
+        simpleInterest(250.36, .06, 12);
+
+    }
+
+    public static double simpleInterest(double principle, double rate, double period) {
+        double totalAmount = principle * (1 + rate * period);
+        totalAmount = Math.round(totalAmount * 100.0) / 100.0;
+        System.out.println("The amount you'll have after interest is: $" + totalAmount);
+        return totalAmount;
+    }
+
+}
